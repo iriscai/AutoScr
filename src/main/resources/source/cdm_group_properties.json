@@ -1,0 +1,150 @@
+{
+  "cdm_groups": [
+    {
+      "name": "SAL",
+      "value": "2"
+    },
+    {
+      "name": "MKT",
+      "value": "11"
+    },
+    {
+      "name": "ERP",
+      "value": "7"
+    }
+  ],
+  "cdm_linkgroups": [
+    {
+      "name": "erp",
+      "value": "ERP_ZAIBEI_NEW"
+    },
+    {
+      "name": "hssc",
+      "value": "black_mkt"
+    },
+    {
+      "name": "c2m",
+      "value": "C2M"
+    }
+  ],
+  "cdm_linkdbtypegroups": [
+    {
+      "name": "ERP_ZAIBEI_NEW",
+      "value": "DB2"
+    },
+    {
+      "name": "ZB_Fk",
+      "value": "DB2"
+    },
+    {
+      "name": "Mkt_Pro",
+      "value": "DB2"
+    },
+    {
+      "name": "jyjx_kanban",
+      "value": "MYSQL"
+    },
+    {
+      "name": "ZB_DB2",
+      "value": "DB2"
+    },
+    {
+      "name": "XZL",
+      "value": "MYSQL"
+    },
+    {
+      "name": "black_mkt",
+      "value": "MYSQL"
+    },
+    {
+      "name": "zsjgl",
+      "value": "ORACLE"
+    },
+    {
+      "name": "LJS",
+      "value": "SQLSERVER"
+    },
+    {
+      "name": "C2M",
+      "value": "DB2"
+    },
+    {
+      "name": "GM_N7",
+      "value": "SQLSERVER"
+    }
+  ],
+  "cdm_linkdbs": [
+    {
+      "name": "ERP_ZAIBEI_NEW",
+      "value": "DB2"
+    },
+    {
+      "name": "jyjx_kanban",
+      "value": "MYSQL"
+    },
+    {
+      "name": "ZB_DB2",
+      "value": "DB2"
+    },
+    {
+      "name": "XZL",
+      "value": "MYSQL"
+    },
+    {
+      "name": "black_mkt",
+      "value": "MYSQL"
+    },
+    {
+      "name": "zsjgl",
+      "value": "ORACLE"
+    },
+    {
+      "name": "LJS",
+      "value": "SQLSERVER"
+    },
+    {
+      "name": "C2M",
+      "value": "DB2"
+    },
+    {
+      "name": "GM_N7",
+      "value": "SQLSERVER"
+    }
+  ],
+  "cdm_extetldtfun": [
+    {
+      "name": "MYSQL",
+      "value": "${dateformat(yyyy-MM-dd HH:mm:ss)}"
+    },
+    {
+      "name": "ORACLE",
+      "value": "${dateformat(yyyy-MM-dd HH:mm:ss)}"
+    },
+    {
+      "name": "DB2",
+      "value": "${dateformat(yyyy-MM-dd HH:mm:ss)}"
+    },
+    {
+      "name": "SQLSERVER",
+      "value": "${dateformat(yyyy-MM-dd HH:mm:ss)}"
+    }
+  ],
+  "cdm_dtfun": [
+    {
+      "name": "MYSQL",
+      "value": "DATE_SUB(current_date,INTERVAL 1 DAY)"
+    },
+    {
+      "name": "ORACLE",
+      "value": "current_date()"
+    },
+    {
+      "name": "DB2",
+      "value": "to_char(current timestamp -1 day ,'yyyy-mm-dd')"
+    },
+    {
+      "name": "SQLSERVER",
+      "value": "dateadd(d,-1,convert(date,getdate() ) )"
+    }
+  ]
+}

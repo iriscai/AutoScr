@@ -1,0 +1,207 @@
+{
+  "job_type": "NORMAL_JOB",
+  "to-config-values": {
+    "extended-configs": {
+    },
+    "configs": [
+      {
+        "inputs": [
+          {
+            "name": "toJobConfig.hive",
+            "value": "hive"
+          },
+          {
+            "name": "toJobConfig.database",
+            "value": "toJobConfig_database"
+          },
+          {
+            "name": "toJobConfig.table",
+            "value": "toJobConfig_table"
+          },
+          {
+            "name": "toJobConfig.tablePreparation",
+            "value": "DO_NOTHING"
+          },
+          {
+            "name": "toJobConfig.columnList",
+            "value": "toJobConfig_columnList&ext_etl_dt&ext_src_sys_id&dt"
+          },
+          {
+            "name": "toJobConfig.shouldClearTable",
+            "value": "false"
+          }
+        ],
+        "name": "toJobConfig"
+      }
+    ],
+    "validators": []
+  },
+  "from-config-values": {
+    "extended-configs": {
+      "name": "fromJobConfig.extendedFields",
+      "value": "eyLCYXRjaEpvYiI6ImZhbHNlIn0="
+    },
+    "configs": [
+      {
+        "inputs": [
+          {
+            "name": "fromJobConfig.useSql",
+            "value": "false"
+          },
+          {
+            "name": "fromJobConfig.schemaName",
+            "value": "fromJobConfig_schemaName"
+          },
+          {
+            "name": "fromJobConfig.tableName",
+            "value": "fromJobConfig_tableName"
+          },
+          {
+            "name": "fromJobConfig.incrMigration",
+            "value": "false"
+          },
+          {
+            "name": "fromJobConfig.columnList",
+            "value": "fromJobConfig_columnList&ext_etl_dt&ext_src_sys_id&dt"
+          },
+          {
+            "name": "fromJobConfig.sampleValueColumn",
+            "value": "ext_etl_dt:extetldtfun&ext_src_sys_id:extsrcsyssource&dt:dtfun"
+          },
+          {
+            "name": "fromJobConfig.allowNullValueInPartitionColumn",
+            "value": "true"
+          },
+          {
+            "name": "fromJobConfig.cdc",
+            "value": "false"
+          },
+          {
+            "name": "fromJobConfig.createOutTable",
+            "value": "false"
+          }
+        ],
+        "name": "fromJobConfig"
+      },
+      {
+        "inputs": [],
+        "name": "incrementalRead"
+      }
+    ],
+    "validators": []
+  },
+  "from-connector-name": "generic-jdbc-connector",
+  "to-link-name": "MRS_HIVE_NGDG",
+  "driver-config-values": {
+    "extended-configs": {
+    },
+    "configs": [
+      {
+        "inputs": [
+          {
+            "name": "throttlingConfig.concurrentSubJobs",
+            "value": "10"
+          },
+          {
+            "name": "throttlingConfig.numExtractors",
+            "value": "1"
+          },
+          {
+            "name": "throttlingConfig.submitToCluster",
+            "value": "false"
+          },
+          {
+            "name": "throttlingConfig.numLoaders",
+            "value": "1"
+          },
+          {
+            "name": "throttlingConfig.recordDirtyData",
+            "value": "false"
+          },
+          {
+            "name": "throttlingConfig.writeToLink",
+            "value": "OBS_NG"
+          },
+          {
+            "name": "throttlingConfig.maxErrorRecords",
+            "value": "10"
+          }
+        ],
+        "name": "throttlingConfig"
+      },
+      {
+        "inputs": [],
+        "name": "jarConfig"
+      },
+      {
+        "inputs": [
+          {
+            "name": "schedulerConfig.isSchedulerJob",
+            "value": "false"
+          },
+          {
+            "name": "schedulerConfig.cycleType",
+            "value": "month"
+          },
+          {
+            "name": "schedulerConfig.startDate",
+            "value": "2022-12-05 09:24:46"
+          },
+          {
+            "name": "schedulerConfig.disposableType",
+            "value": "NONE"
+          }
+        ],
+        "name": "schedulerConfig"
+      },
+      {
+        "inputs": [
+          {
+            "name": "transformConfig.trans",
+            "value": []
+          }
+        ],
+        "name": "transformConfig"
+      },
+      {
+        "inputs": [
+          {
+            "name": "smnConfig.isNeedNotification",
+            "value": "false"
+          }
+        ],
+        "name": "smnConfig"
+      },
+      {
+        "inputs": [
+          {
+            "name": "retryJobConfig.retryJobType",
+            "value": "NONE"
+          }
+        ],
+        "name": "retryJobConfig"
+      },
+      {
+        "inputs": [
+          {
+            "name": "groupJobConfig.groupId",
+            "value": "groupJobConfig_groupId"
+          },
+          {
+            "name": "groupJobConfig.groupName",
+            "value": "groupJobConfig_groupName"
+          }
+        ],
+        "name": "groupJobConfig"
+      },
+      {
+        "inputs": [],
+        "name": "partitionConfig"
+      }
+    ],
+    "validators": []
+  },
+  "to-connector-name": "hive-connector",
+  "from-link-name": "from_link_name",
+  "name": "cdmSourceOdsJsonName"
+}

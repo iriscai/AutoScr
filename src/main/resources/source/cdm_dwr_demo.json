@@ -1,0 +1,192 @@
+{
+  "job_type": "NORMAL_JOB",
+  "to-config-values": {
+    "extended-configs": {
+      "name": "toJobConfig.extendedFields",
+      "value": "eyLpbXBvcnRNb2RlIjoiVVBTRVLUIn0="
+    },
+    "configs": [
+      {
+        "inputs": [
+          {
+            "name": "toJobConfig.schemaName",
+            "value": "toJobConfig_schemaName"
+          },
+          {
+            "name": "toJobConfig.tablePreparation",
+            "value": "DO_NOTHING"
+          },
+          {
+            "name": "toJobConfig.tableName",
+            "value": "toJobConfig_tableName"
+          },
+          {
+            "name": "toJobConfig.columnList",
+            "value": "toJobConfig_columnList&ext_etl_dt&ext_src_sys_id"
+          },
+          {
+            "name": "toJobConfig.useStageTable",
+            "value": "false"
+          },
+          {
+            "name": "toJobConfig.shouldClearTable",
+            "value": "true"
+          },
+          {
+            "name": "toJobConfig.beforeImportType",
+            "value": "shouldClearTable"
+          },
+          {
+            "name": "toJobConfig.onConflict",
+            "value": "EXCEPTION"
+          }
+        ],
+        "name": "toJobConfig"
+      }
+    ],
+    "validators": []
+  },
+  "from-config-values": {
+    "extended-configs": {
+    },
+    "configs": [
+      {
+        "inputs": [
+          {
+            "name": "fromJobConfig.hive",
+            "value": "hive"
+          },
+          {
+            "name": "fromJobConfig.database",
+            "value": "fromJobConfig_database"
+          },
+          {
+            "name": "fromJobConfig.table",
+            "value": "fromJobConfig_table"
+          },
+          {
+            "name": "fromJobConfig.readMode",
+            "value": "HDFS"
+          },
+          {
+            "name": "fromJobConfig.columnList",
+            "value": "fromJobConfig_columnList&ext_etl_dt&ext_src_sys_id"
+          },
+          {
+            "name": "fromJobConfig.partitionValues",
+            "value": {
+            }
+          }
+        ],
+        "name": "fromJobConfig"
+      }
+    ],
+    "validators": []
+  },
+  "from-connector-name": "hive-connector",
+  "to-link-name": "DWS_NGDG",
+  "driver-config-values": {
+    "extended-configs": {
+    },
+    "configs": [
+      {
+        "inputs": [
+          {
+            "name": "throttlingConfig.concurrentSubJobs",
+            "value": "10"
+          },
+          {
+            "name": "throttlingConfig.numExtractors",
+            "value": "1"
+          },
+          {
+            "name": "throttlingConfig.submitToCluster",
+            "value": "false"
+          },
+          {
+            "name": "throttlingConfig.numLoaders",
+            "value": "1"
+          },
+          {
+            "name": "throttlingConfig.recordDirtyData",
+            "value": "false"
+          },
+          {
+            "name": "throttlingConfig.writeToLink",
+            "value": "OBS_NG"
+          },
+          {
+            "name": "throttlingConfig.maxErrorRecords",
+            "value": "10"
+          }
+        ],
+        "name": "throttlingConfig"
+      },
+      {
+        "inputs": [],
+        "name": "jarConfig"
+      },
+      {
+        "inputs": [
+          {
+            "name": "schedulerConfig.isSchedulerJob",
+            "value": "false"
+          },
+          {
+            "name": "schedulerConfig.disposableType",
+            "value": "NONE"
+          }
+        ],
+        "name": "schedulerConfig"
+      },
+      {
+        "inputs": [
+          {
+            "name": "transformConfig.trans",
+            "value": []
+          }
+        ],
+        "name": "transformConfig"
+      },
+      {
+        "inputs": [
+          {
+            "name": "smnConfig.isNeedNotification",
+            "value": "false"
+          }
+        ],
+        "name": "smnConfig"
+      },
+      {
+        "inputs": [
+          {
+            "name": "retryJobConfig.retryJobType",
+            "value": "NONE"
+          }
+        ],
+        "name": "retryJobConfig"
+      },
+      {
+        "inputs": [
+          {
+            "name": "groupJobConfig.groupId",
+            "value": "groupJobConfig_groupId"
+          },
+          {
+            "name": "groupJobConfig.groupName",
+            "value": "groupJobConfig_groupName"
+          }
+        ],
+        "name": "groupJobConfig"
+      },
+      {
+        "inputs": [],
+        "name": "partitionConfig"
+      }
+    ],
+    "validators": []
+  },
+  "to-connector-name": "generic-jdbc-connector",
+  "from-link-name": "MRS_HIVE_NGDG",
+  "name": "cdm_dwi_dwr_json_name"
+}

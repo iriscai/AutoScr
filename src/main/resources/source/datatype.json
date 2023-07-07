@@ -1,0 +1,49 @@
+{
+  "ORCALE": {
+    "VARCHAR": "VARCHAR",
+    "VARCHAR": "VARCHAR",
+    "VARCHAR": "VARCHAR"
+  },
+  "MYSQL": {
+    "TINYINT": "VARCHAR",
+    "SMALLINT": "VARCHAR",
+    "MEDIUMINT": "VARCHAR",
+    "INT": "VARCHAR",
+    "INTEGER": "VARCHAR",
+    "BIGINT": "VARCHAR",
+    "FLOAT": "VARCHAR",
+    "DOUBLE": "VARCHAR",
+    "REAL": "VARCHAR",
+    "DECIMAL": "VARCHAR",
+    "BIT": "VARCHAR",
+    "TIMESTAMP": "VARCHAR",
+    "DATETIME": "VARCHAR",
+    "YEAR": "VARCHAR",
+    "TIME": "VARCHAR",
+    "DATE": "VARCHAR",
+    "CHAR": "VARCHAR",
+    "VARCHAR": "VARCHAR",
+    "TINYTEXT": "VARCHAR",
+    "TEXT": "VARCHAR",
+    "MEDIUMTEXT": "VARCHAR",
+    "LONGTEXT": "VARCHAR",
+    "ENUM": "VARCHAR",
+    "SET": "VARCHAR",
+    "BINARY": "VARCHAR",
+    "VARBINARY": "VARCHAR",
+    "BLOB": "VARCHAR",
+    "JSON": "VARCHAR",
+    "GEOMETRY": "VARCHAR",
+    "POINT": "VARCHAR",
+    "LINESTRING": "VARCHAR",
+    "POLYGON": "VARCHAR",
+    "MULTIPOINT": "VARCHAR",
+    "MULTILINESTRING": "VARCHAR",
+    "MULTIPOLYGON": "VARCHAR",
+    "GEOMETRYCOLLECTION": "VARCHAR"
+  },
+  "others": {
+    "STRING": "VARCHAR",
+    "VARCHAR": "VARCHAR"
+  }
+}

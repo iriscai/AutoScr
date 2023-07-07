@@ -1,0 +1,56 @@
+{
+  "scriptOwnerTips": "别瞎删喔~~！！",
+  "scriptDesc": {
+    "configuration": {},
+    "connectionName": "DWS_NGDG",
+    "content": "**************",
+    "currentDatabase": "ngdg",
+    "description": "",
+    "directory": "/NGDG/DWR/MKT/JH/DDL",
+    "name": "dws_dwr_mkt_tbsrnjpricecheck_bc_jc_f",
+    "templateVersion": "1.0",
+    "type": "DWSSQL"
+  },
+  "scripttitletips": "--*************************************--\n--**主题: tableName\n--**描述：tableComment\n--**创建者：jh_name\n--**创建时间：currentDate\n--**修改内容：\n--**修改内容：checkfirst ！！\n--**修改时间：\n--**修改者：\n--*************************************--\n",
+  "flinkJobTips": "-- ******************************************************************** --\n-- Flink Jobs\n-- author: jh_name\n-- create time: currentDate\n-- ① 创建kafka流表\n-- ② 构建MOR模式Hudi表\n-- ③ 插入数据到hudi表\n-- ******************************************************************** --\n",
+  "kafkaSource": {
+    "connector" : "kafka",
+    "topic" : "RT_MES_BC_FLINK2HUDI_GP_PLATE",
+    "properties.bootstrap.servers" : "172.25.9.10:21005,172.25.9.9:21005,172.25.9.8:21005,172.25.9.40:21005,172.25.9.41:21005,172.25.9.42:21005,172.25.9.43:21005,172.25.9.44:21005",
+    "properties.group.id" : "kafkatohudimesbc",
+    "scan.startup.mode" : "latest-offset",
+    "format" : "debezium-json"
+  },
+  "flinkSource": {
+    "connector" : "hudi",
+    "path" : "hdfs://hacluster/user/hive/warehouse/dwi_sal.db/dwi_sal_gp_plate_hudi",
+    "table.type" : "MERGE_ON_READ",
+    "hoodie.datasource.write.recordkey.field" : "plate_no,slab_no"
+  },
+  "excelcolumns": {
+    "0": "L1",
+    "1": "L1资产编码",
+    "2": "L2",
+    "3": "L3",
+    "4": "路径",
+    "5": "逻辑实体-英文(L4)",
+    "6": "逻辑实体-中文(L4)",
+    "7": "源系统表名-英文",
+    "8": "表名-英文（规范后）",
+    "9": "表名-中文（规范后）",
+    "10": "表业务含义及用途(L4业务含义)",
+    "11": "属性-英文（L5）",
+    "12": "属性-中文（L5）",
+    "13": "*属性名称(ENG)",
+    "14": "*属性名称(CHN)",
+    "15": "数据类型",
+    "16": "源系统字段类型",
+    "17": "字段类型",
+    "18": "是否为空",
+    "19": "字段长度",
+    "20": "是否为主键",
+    "21": "字段业务含义及用途（L5）",
+    "22": "引用标准",
+    "23": "数据来源"
+  }
+}
