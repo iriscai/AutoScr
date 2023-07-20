@@ -149,7 +149,6 @@ public class JobJsonFun {
                 ddlNodeJson = JSONObject.parseObject(dataSplit.writejobDDLnodes(String.valueOf(i * 100), scriptName, odsCdmDB));
                 nodes.add(ddlNodeJson);
             }
-
             String jobWriteFilePath = "src/main/resources/AutoToLake/out/JOB/";
             String jobWriteFileName = jobWriteFilePath + "JOB_ODSDDL_" + entry.getKey() + "_" + dateVersion + ".job";
             try {
