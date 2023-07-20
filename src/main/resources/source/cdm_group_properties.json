@@ -9,8 +9,58 @@
       "value": "11"
     },
     {
+      "name": "FSSC",
+      "value": "41"
+    },
+    {
       "name": "ERP",
       "value": "7"
+    }
+  ],
+  "cdm_extended-configs": [
+    {
+      "name": "0",
+      "value": "eyLCYXRjaEpvYiI6ImZhbHNlIn0="
+    },
+    {
+      "name": "1",
+      "value": "eyLCYXRjaEpvYiI6ImZhbHNlIn0="
+    },
+    {
+      "name": "2",
+      "value": "eyLCYXRjaEpvYiI6ImZhbHNlIn0="
+    },
+    {
+      "name": "3",
+      "value": "eyLCYXRjaEpvYiI6ImZhbHNlIn0="
+    },
+    {
+      "name": "4",
+      "value": "eyLCYXRjaEpvYiI6ImZhbHNlIn0="
+    },
+    {
+      "name": "5",
+      "value": "eyLCYXRjaEpvYiI6ImZhbHNlIn0="
+    },
+    {
+      "name": "6",
+      "value": "eyLCYXRjaEpvYiI6ImZhbHNlIn0="
+    },
+    {
+      "name": "7",
+      "value": "eyLCYXRjaEpvYiI6ImZhbHNlIn0="
+    },
+    {
+      "name": "8",
+      "value": "eyLCYXRjaEpvYiI6ImZhbHNlIn0="
+    },
+    {
+      "name": "9",
+      "value": "eyLCYXRjaEpvYiI6ImZhbHNlIn0="
+    },
+    {
+      "name": "10",
+      "value": "eyLCYXRjaEpvYiI6ImZhbHNlIn0="
     }
   ],
   "cdm_linkgroups": [
@@ -30,6 +80,10 @@
   "cdm_linkdbtypegroups": [
     {
       "name": "ERP_ZAIBEI_NEW",
+      "value": "DB2"
+    },
+    {
+      "name": "ngfssc",
       "value": "DB2"
     },
     {
@@ -76,6 +130,10 @@
   "cdm_linkdbs": [
     {
       "name": "ERP_ZAIBEI_NEW",
+      "value": "DB2"
+    },
+    {
+      "name": "ngfssc",
       "value": "DB2"
     },
     {

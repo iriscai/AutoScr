@@ -1,0 +1,127 @@
+{
+  "details": {
+    "basicConfig": {
+      "agency": "",
+      "customFields": {},
+      "executeUser": "",
+      "instanceTimeout": 0,
+      "owner": "jh_caiyi",
+      "priority": 0
+    },
+    "directory": "directory_name",
+    "emptyRunningJob": "0",
+    "location": {
+      "x": "0",
+      "y": "0"
+    },
+    "name": "job_name",
+    "nodes": [],
+    "processType":"BATCH",
+    "resouces":[],
+    "schedule":{
+      "cron":{
+        "concurrent":1,
+        "dependJobs":{
+          "dependFailPolicy":"FAIL",
+          "dependPeriod":"SAME_PERIOD",
+          "jobs":[],
+          "sameWorkSpaceJobs":[]
+        },
+        "dependPrePeriod":false,
+        "expression":"0 0 1 * * ?",
+        "expressionTimeZone":"Asia/Shanghai",
+        "startTime":"2023-01-09T10:41:40+08"
+      },
+      "type":"CRON"
+    },
+    "singleNodeJobFlag":false,
+    "useCdmCache":false,
+    "version":"1.0"
+  },
+
+  "etl_node_demo": {
+    "failPolicy": "FAIL_CHILD",
+    "lineageInfo": "[{\"outputs\":[],\"inputs\":[]}]",
+    "location": {},
+    "maxExecutionTime": 360,
+    "name": "etl_scriptName",
+    "pollingInterval": 20,
+    "preNodeName": [
+      "preNode_name"
+    ],
+    "properties": [],
+    "resouces": [],
+    "retryInterval": 30,
+    "retryTimes": 3,
+    "type": "script_type"
+  },
+
+  "Dummy_node_demo": {
+    "failPolicy": "FAIL_CHILD",
+    "location": {
+      "x": "10",
+      "y": "10"
+    },
+    "maxExecutionTime": 360,
+    "name": "开始",
+    "pollingInterval": 20,
+    "preNodeName": [],
+    "properties": [
+      {
+        "name": "emptyRunningJob",
+        "value": "0"
+      }
+    ],
+    "resouces": [],
+    "retryInterval": 30,
+    "retryTimes": 3,
+    "type": "Dummy"
+  },
+  "ods_ddl_node_demo": {
+    "failPolicy":"IGNORE",
+    "lineageInfo":"[{\"outputs\":[],\"inputs\":[]}]",
+    "location":{},
+    "maxExecutionTime":10,
+    "name":"hive_ods_fssc_t_voucher_main_area_extend_f",
+    "pollingInterval":60,
+    "preNodeName":[
+      "开始"
+    ],
+    "properties":[],
+    "resouces":[],
+    "retryInterval":60,
+    "retryTimes":2,
+    "type":"SparkSQL"
+  },
+  "ddl_details": {
+    "basicConfig":{
+      "agency":"",
+      "customFields":{},
+      "executeUser":"",
+      "instanceTimeout":0,
+      "owner":"jh_caiyi",
+      "priority":0
+    },
+    "directory":"/NGDG/ETL/JH_FIN/按天全量",
+    "emptyRunningJob":"1",
+    "location":{
+      "x":"0",
+      "y":"0"
+    },
+    "maskedParams":[],
+    "name":"job_财务域_全量_test05",
+    "nodes":[],
+    "processType":"BATCH",
+    "resouces":[],
+    "schedule":{
+      "type":"EXECUTE_ONCE"
+    },
+    "singleNodeJobFlag":false,
+    "useCdmCache":false,
+    "version":"1.0"
+  }
+}
+
+
+
+

@@ -10,7 +10,7 @@ public class Before {
         System.out.println("文档校验!");
 
         CheckExcel checkExcel=new CheckExcel();
-        checkExcel.checkFile("src/main/resources/AutoToLake/in/财务字段级清单.xlsx", "caiyi_ods", "ods");
+        checkExcel.checkFile("src/main/resources/AutoToLake/in/供应商有效表清单.xlsx", "脚本主表", "ods");
 
 //        checkExcel.checkFile("src/main/resources/AutoToLake/in/供应商有效表清单.xlsx", "蔡怡", "dwi");
 
