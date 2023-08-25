@@ -39,12 +39,15 @@ public class CDMOdsJsonFun {
         HashMap<String, String> odstableSourceDBNameMap = new HashMap<>();
         //odstableL2NameMap为领域 类似 TBSRNJPRICECHECK：MKT
         HashMap<String, String> odstableL2NameMap = new HashMap<>();
+        //odstableSourceNameMap 类似 TBSONJEVALUATE：ERP
+        HashMap<String, String> odstableSourceNameMap = new HashMap<>();
         //odstablecdmfromlink 类似 TBSRNJPRICECHECK：ERP_ZAIBEI_NEW
         HashMap<String, String> odstablecdmfromlink = new HashMap<>();
         //odstablecdmfromlinkschema 类似 TBSRNJPRICECHECK：DB
         HashMap<String, String> odstablecdmfromlinkschema = new HashMap<>();
         for (Map<Integer, String> data : dataList) {
             //添加map数据
+            odstableSourceNameMap.put(data.get(columnsPosiMap.get("源系统表名-英文")), data.get(columnsPosiMap.get("来源")));
             odstableL2NameMap.put(data.get(columnsPosiMap.get("源系统表名-英文")), data.get(columnsPosiMap.get("L1资产编码")));
             odstablecdmfromlink.put(data.get(columnsPosiMap.get("源系统表名-英文")), data.get(columnsPosiMap.get("CDM-ODS连接器")));
             odstablecdmfromlinkschema.put(data.get(columnsPosiMap.get("源系统表名-英文")), data.get(columnsPosiMap.get("CDM-ODS空间")));
@@ -63,7 +66,7 @@ public class CDMOdsJsonFun {
         }
         for (HashMap.Entry<String, String> entry : odstableCommentMap.entrySet()) {
             JSONObject cdmOdsJson2 = new JSONObject();
-            cdmOdsJson2 = JSONObject.parseObject(dataSplit.writeCDMOdsjson(entry.getKey(), odstableSourceDBNameMap.get(entry.getKey()), sourceColumnsMap, odstableL2NameMap.get(entry.getKey()),odstablecdmfromlink.get(entry.getKey()),odstablecdmfromlinkschema.get(entry.getKey())));
+            cdmOdsJson2 = JSONObject.parseObject(dataSplit.writeCDMOdsjson(entry.getKey(), odstableSourceDBNameMap.get(entry.getKey()), sourceColumnsMap, odstableSourceNameMap.get(entry.getKey()),odstablecdmfromlink.get(entry.getKey()),odstablecdmfromlinkschema.get(entry.getKey())));
             odsjsonArray.add(cdmOdsJson2);
         }
 

@@ -143,7 +143,7 @@ public class JobJsonFun {
             nodes.add(jobDemoJson.get("Dummy_node_demo"));
             for (int i = 0; i < entry.getValue().size(); i++) {
                 String tableName = entry.getValue().get(i);
-                String odsCdmDB = "ods_"+dbFrom.get(tableName).toLowerCase();
+                String odsCdmDB = dbFrom.get(tableName).toLowerCase();
                 String scriptName = "hive_" + odsCdmDB + "_" + tableName + "_f";
                 JSONObject ddlNodeJson = new JSONObject();
                 ddlNodeJson = JSONObject.parseObject(dataSplit.writejobDDLnodes(String.valueOf(i * 100), scriptName, odsCdmDB));

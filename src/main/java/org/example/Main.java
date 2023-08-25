@@ -9,20 +9,20 @@ public class Main {
         System.out.println("Hello world!");
 
 
-////
-//        DWIRDDLFun dwirddlFun = new DWIRDDLFun();
-//        dwirddlFun.getDwrDwiSpricts("src/main/resources/AutoToLake/in/供应商有效表清单.xlsx", "jc_f", "jh_caiyi");
+//////
+        DWIRDDLFun dwirddlFun = new DWIRDDLFun();
+        dwirddlFun.getDwrDwiSpricts("src/main/resources/AutoToLake/in/入湖脚本数据.xlsx", "毛凯乐", "jh_maokaile");
 //        CDMDwrJsonFun cdmDwrJsonFun = new CDMDwrJsonFun();
-////        cdmDwrJsonFun.getJsonFiles("src/main/resources/AutoToLake/in/供应商有效表清单.xlsx", "jc_f");
+////        cdmDwrJsonFun.getJsonFiles("src/main/resources/AutoToLake/in/入湖脚本数据.xlsx", "jc_f");
 //        ODSDDLFun odsddlFun = new ODSDDLFun();
-//        odsddlFun.getodsSpricts("src/main/resources/AutoToLake/in/供应商有效表清单.xlsx", "陶涛",  "jh_taotao");
+//        odsddlFun.getodsSpricts("src/main/resources/AutoToLake/in/入湖脚本数据.xlsx", "蔡怡_1",  "jh_taotao");
 //        CDMOdsJsonFun cdmOdsJsonFun = new CDMOdsJsonFun();
-//        cdmOdsJsonFun.getJsonFiles("src/main/resources/AutoToLake/in/供应商有效表清单.xlsx", "陶涛");
-        JobJsonFun jobJsonFun = new JobJsonFun();
-        jobJsonFun.getJustOdsDDLJob("src/main/resources/AutoToLake/in/供应商有效表清单.xlsx", "调度ODSDDL","jh_caiyi");
-////
+//        cdmOdsJsonFun.getJsonFiles("src/main/resources/AutoToLake/in/入湖脚本数据.xlsx", "蔡怡_1");
+//        JobJsonFun jobJsonFun = new JobJsonFun();
+//        jobJsonFun.getJustOdsDDLJob("src/main/resources/AutoToLake/in/入湖脚本数据.xlsx", "初始化建表_蔡怡_1","jh_taotao");
+//        jobJsonFun.getJsonFiles("src/main/resources/AutoToLake/in/入湖脚本数据.xlsx", "调度配置_蔡怡_1","jh_taotao");
 //        FLINKRDDLFun flinkrddlFun=new FLINKRDDLFun();
-//        flinkrddlFun.getDwiFlinks("src/main/resources/AutoToLake/in/供应商有效表清单.xlsx", "hetu", "jh_caiyi");
+//        flinkrddlFun.getDwiFlinks("src/main/resources/AutoToLake/in/入湖脚本数据.xlsx", "hetu", "jh_caiyi");
 
 
     }

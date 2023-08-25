@@ -104,6 +104,8 @@ public class DWIRDDLFun {
                 columnsLengthMap.put(data.get(columnsPosiMap.get("逻辑实体-英文(L4)")), tablecolumnsLengthCommentsMap);
             }
         }
+        System.out.println(tableCommentMap);
+
         dataList.clear();
         int i = 1;
         //添加表头
@@ -116,7 +118,7 @@ public class DWIRDDLFun {
                 tablePriKeyMap.get(entry.getKey());
                 dataSplit.writeDwrJcFDDLWithPriKeys(entry.getKey(), tableL2NameMap.get(entry.getKey()), columnsCommentMap.get(entry.getKey()), entry.getValue(), tablePriKeyMap.get(entry.getKey()).toString(),columnsIfNullMap, jhOwner);
             } catch (Exception e) {
-                dataSplit.writeDwrJcFDDLWithOutPriKey(entry.getKey(), tableL2NameMap.get(entry.getKey()), columnsCommentMap.get(entry.getKey()), tableCommentMap.get(entry), columnsIfNullMap,jhOwner);
+                dataSplit.writeDwrJcFDDLWithOutPriKey(entry.getKey(), tableL2NameMap.get(entry.getKey()), columnsCommentMap.get(entry.getKey()), entry.getValue(), columnsIfNullMap,jhOwner);
             }
         }
     }

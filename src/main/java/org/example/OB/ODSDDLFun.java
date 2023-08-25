@@ -30,6 +30,8 @@ public class ODSDDLFun {
         HashMap<String, String> odstableSourceDBNameMap = new HashMap<>();
         //odstableL2NameMap 类似 TBSONJEVALUATE：SAL
         HashMap<String, String> odstableL2NameMap = new HashMap<>();
+        //odstableSourceNameMap 类似 TBSONJEVALUATE：ERP
+        HashMap<String, String> odstableSourceNameMap = new HashMap<>();
         //columnsCommentMap为字段注释map 类似 TBSRNJPRICECHECK：<versionno:版本号,newgrade:新客户级别>
         HashMap<String, HashMap<String, String>> odscolumnsCommentMap = new HashMap<>();
         //odscolumnsLengthMap为字段长度map 类似 TBSRNJPRICECHECK：<versionno:VARCHAR(2),newgrade:DECIMAL(10,2)>
@@ -38,6 +40,7 @@ public class ODSDDLFun {
             //添加map数据
             odstableSourceDBNameMap.put(data.get(columnsPosiMap.get("源系统表名-英文")), data.get(columnsPosiMap.get("来源")).toLowerCase());
             odstableL2NameMap.put(data.get(columnsPosiMap.get("源系统表名-英文")), data.get(columnsPosiMap.get("L1资产编码")));
+            odstableSourceNameMap.put(data.get(columnsPosiMap.get("源系统表名-英文")), data.get(columnsPosiMap.get("来源")));
             odstableCommentMap.put(data.get(columnsPosiMap.get("源系统表名-英文")), data.get(columnsPosiMap.get("源系统表名-中文")));
             //字段备注
             if (!odscolumnsCommentMap.containsKey(data.get(columnsPosiMap.get("源系统表名-英文")))) {
@@ -70,8 +73,8 @@ public class ODSDDLFun {
         dataList.add(0, titleName);
         //去重
         for (HashMap.Entry<String, String> entry : odstableCommentMap.entrySet()) {
-            dataSplit.writeodsDeleteDtETL(odstableL2NameMap.get(entry.getKey()), entry.getKey().toLowerCase(), odstableSourceDBNameMap.get(entry.getKey()), entry.getValue(),jhOwner);
-            dataSplit.writeodsDDL(odstableL2NameMap.get(entry.getKey()), entry.getKey().toLowerCase(), odstableSourceDBNameMap.get(entry.getKey()), odscolumnsCommentMap.get(entry.getKey()), odscolumnsLengthMap.get(entry.getKey()), odstableCommentMap.get(entry.getKey()),jhOwner);
+            dataSplit.writeodsDeleteDtETL(odstableSourceNameMap.get(entry.getKey()), entry.getKey().toLowerCase(), odstableSourceDBNameMap.get(entry.getKey()), entry.getValue(),jhOwner);
+            dataSplit.writeodsDDL(odstableSourceNameMap.get(entry.getKey()), entry.getKey().toLowerCase(), odstableSourceDBNameMap.get(entry.getKey()), odscolumnsCommentMap.get(entry.getKey()), odscolumnsLengthMap.get(entry.getKey()), odstableCommentMap.get(entry.getKey()),jhOwner);
         }
 
     }

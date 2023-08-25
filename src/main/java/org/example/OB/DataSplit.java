@@ -436,6 +436,9 @@ public class DataSplit {
 //        String fromJobConfigSchemaName =cdmlinkdbsMap.get(fromLinkName);    //DB
         String fromJobConfigSchemaName = odstablecdmfromlinkschema;    //DB
         String dbType = cdmlinkdbtypegroupsMap.get(fromLinkName);            //MYSQL
+        if (dbType.equals("ORACLE")){
+            fromJobConfigTableName=fromJobConfigTableName.toUpperCase();
+        }
         String extetldtfun = cdmextetldtfunMap.get(dbType);                 //MYSQL:${dateformat(yyyy-MM-dd HH:mm:ss)}
         String extsrcsyssource = sourceDB.toLowerCase();                    //erp
         String dtfun = cdmdtfunMap.get(dbType);                             //MYSQL:DATE_SUB(current_date,INTERVAL 1 DAY)

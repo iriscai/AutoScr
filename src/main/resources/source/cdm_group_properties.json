@@ -84,7 +84,7 @@
     },
     {
       "name": "ngfssc",
-      "value": "DB2"
+      "value": "ORACLE"
     },
     {
       "name": "ZB_Fk",
@@ -134,7 +134,7 @@
     },
     {
       "name": "ngfssc",
-      "value": "DB2"
+      "value": "ORACLE"
     },
     {
       "name": "jyjx_kanban",
@@ -194,7 +194,7 @@
     },
     {
       "name": "ORACLE",
-      "value": "current_date()"
+      "value": "current_date"
     },
     {
       "name": "DB2",
